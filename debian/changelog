@@ -1,3 +1,46 @@
+libxslt (1.1.28-2.1ubuntu0.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bounds heap memory access
+    - debian/patches/0010-CVE-2016-1683.patch: special case namespace
+      nodes in xsltNumberFormatGetMultipleLevel
+    - CVE-2016-1683
+  * SECURITY UPDATE: integer overflow
+    - debian/patches/0011-CVE-2016-1684-1.patch,
+      debian/patches/0012-CVE-2016-1684-2.patch: add lower and upper
+      bounds for 'i' and 'a' format tokens
+    - CVE-2016-1684
+  * SECURITY UPDATE: use-after-free in xsltDocumentFunctionLoadDocument
+    - debian/patches/0013-CVE-2016-1841.patch: adjust xmlFree() call
+    - CVE-2016-1841
+  * SECURITY UPDATE: heap information leak
+    - debian/patches/0014-CVE-2016-4738.patch: check for empty
+      decimal separator.
+    - CVE-2016-4738
+  * SECURITY UPDATE: integer overflow in libxslt.
+    - debian/patches/0015-CVE-2017-5029.patch: limit buffer size in
+      xsltAddTextString to INT_MAX.
+    - CVE-2017-5029
+  * SECURITY UPDATE: double free in hash functions
+    - 0016-Fix-double-free-in-libexslt-hash-functions-d8862309f0.patch:
+      remove duplicate free calls
+  * SECURITY UPDATE: NULL pointer dereference in Saxon
+    - 0017-Fix-error-handling-in-Saxon-extension-functions-ef7429bb4.patch:
+      fix error handling in Saxon extension functions
+  * SECURITY UPDATE: out-of-bounds heap memory access
+    - 0018-Fix-dyn-map-with-namespace-nodes-93bb3147.patch: use
+      correct type for namespace nodes in exsltDynMapFunction
+  * SECURITY UPDATE: out-of-bounds heap read memory access
+    - 0019-Fix-saxon-line-number-with-namespace-nodes-8b90c9a6.patch:
+      do not pass namespace "nodes" to xmlGetLineNo
+  * SECURITY UPDATE: stack-based buffer overflow in exsltDateFormat
+    - 0020-Fix-buffer-overflow-in-exsltDateFormat-5d0c6565b.patch:
+      make stack buffer larger
+  * SECURITY UPDATE: out-of-bounds head read in xsltExtModuleRegisterDynamic
+    - 0021-Fix-OOB-heap-read-in-xsltExtModuleRegisterDynamic-87c3d9ea.patch:
+      correct stripping of unwanted characters
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Tue, 25 Apr 2017 23:38:39 -0700
+
 libxslt (1.1.28-2.1) unstable; urgency=high
 
   * Non-maintainer upload.
