@@ -19,3 +19,4 @@
 0019-Fix-saxon-line-number-with-namespace-nodes-8b90c9a6.patch
 0020-Fix-buffer-overflow-in-exsltDateFormat-5d0c6565b.patch
 0021-Fix-OOB-heap-read-in-xsltExtModuleRegisterDynamic-87c3d9ea.patch
+CVE-2019-11068.patch
