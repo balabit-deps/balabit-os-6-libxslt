@@ -20,3 +20,6 @@
 0020-Fix-buffer-overflow-in-exsltDateFormat-5d0c6565b.patch
 0021-Fix-OOB-heap-read-in-xsltExtModuleRegisterDynamic-87c3d9ea.patch
 CVE-2019-11068.patch
+CVE-2019-13117.patch
+CVE-2019-13118.patch
+CVE-2019-18197.patch
